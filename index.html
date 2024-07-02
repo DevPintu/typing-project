@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Identify the alphabet</title>
+   
+</head>
+<body style="background-image: url(bg.svg); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <div class="wrapper">
+        <h1>Find and Type Alphabet</h1>
+        <p id="head">Type the given alphabet below:</p>
+        <div class="Activity">
+            <div class="alphabets"><span></span></div>
+            <div class="user-input">
+                <input type="text" name="userInput" class="userInput">
+            </div>
+        </div>
+        <button class="btn-submit">Submit</button>
+        <div class="score" id="score"></div>
+    </div>
+    <p id="feedback"></p>
+    <script>
+        const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+        
+        let randomLetter;
+        let currentIndexOfQuestion = 0;
+
+        function randomCharacter(charArray) {
+            const randomIndex = Math.floor(Math.random() * charArray.length);
+            return charArray[randomIndex];
+        }
+
+        function displayQuestion() {
+            randomLetter = randomCharacter(characters);
+            let alphabetSpan = document.querySelector('.alphabets span');
+            alphabetSpan.textContent = randomLetter;
+        }
+
+        const submitButton = document.querySelector('.btn-submit');
+        const feedback = document.getElementById('feedback');
+        const answerInput = document.querySelector('.userInput');
+
+        function checkAnswer() {
+            const userInput = answerInput.value.toUpperCase();
+
+            if (userInput === randomLetter) {
+                showFeedback('Correct!');
+            } else {
+                showFeedback('Try Again');
+            }
+            answerInput.value = '';
+
+            // Move to the next question
+            currentIndexOfQuestion++;
+            displayQuestion();
+        }
+
+        function showFeedback(message) {
+            feedback.textContent = message;
+            feedback.style.display = 'block';
+        }
+
+        submitButton.addEventListener('click', checkAnswer);
+
+        // Initial display of the first question
+        displayQuestion();
+    </script>
+</body>
+</html>

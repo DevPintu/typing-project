@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.wrapper{
+    width: 70%;   
+    height: 100vh;
+    font-size: 2rem;
+    padding: 10px 20px;
+    margin-top: 2vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 2px rgba(248, 248, 252, 0.123);
+    /* background-color:  #ffffff1f;   */
+    background-color: rgba(255,255,255,0.9);
+}
+.Activity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    border-radius: 10px;
+    text-align: center;   
+}
+
+span{
+    font-size: 13rem;
+    font-weight: 800;
+    
+}
+.alphabets{
+    border: 2px solid grey; 
+    width: 800px;
+    height: 230px;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.36) ;
+}
+.user-input{
+    width: 800px;
+    height: 230px;
+    margin-top: 10px;
+    margin-left: 40px;
+    background-color: rgba(255,255,255,0.9);
+    border: 2px solid grey; 
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.36) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#head{
+    padding: 2rem 0rem;
+    text-align: right;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+ input{
+    border: none;
+    outline: none;
+    width: 180px;
+    height: auto;
+    text-align: center;
+    font-size: 12rem;
+    font-weight: 700;
+ }
+.btn-submit{
+        margin-top: 8%;
+        width: 100%;
+        height: 60px;
+        border: none;
+        border-radius: 5px;
+        align-content: center;
+        background-color: rgb(18, 48, 221);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 800;
+       
+}
+#feedback{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;    
+    width: 250px;  
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: orangered;
+    padding: 5px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+}
+
